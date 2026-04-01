@@ -13,7 +13,15 @@ services:
       - ./init.sql:/docker-entrypoint-initdb.d/01-init.sql:ro
       - ./seeder.sql:/docker-entrypoint-initdb.d/02-seeder.sql:ro
 
-  lang:
+  typescript:
+    image: node:22
+    container_name: legacy_typescript
+    working_dir: /app
+    volumes:
+      - ./legacy.ts:/app/legacy.ts
+    command: node --experimental-strip-types legacy.ts
+    depends_on:
+      - db
 
 volumes:
   postgres_data:
