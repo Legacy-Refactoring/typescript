@@ -1,0 +1,36 @@
+{
+  "name": "legacy-payment-system-ts",
+  "version": "1.0.0",
+  "description": "Extremely insecure legacy payment system in TypeScript - Educational bad code example for refactoring series",
+  "main": "legacy.js",
+  "scripts": {
+    "start": "ts-node legacy.ts",
+    "build": "tsc",
+    "run:js": "node dist/legacy.js",
+    "dev": "ts-node legacy.ts",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "legacy-code",
+    "bad-code",
+    "security-vulnerabilities",
+    "sql-injection",
+    "refactoring",
+    "educational",
+    "typescript",
+    "postgresql"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "pg": "^8.13.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
